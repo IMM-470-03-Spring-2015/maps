@@ -1,6 +1,10 @@
 <?php
     // we can get the number of the sender using the 'Fromn' request value
     $from = $_REQUEST['From'];
+    $city = $_REQUEST['FromCity'];
+    $state = $_REQUEST['FromState'];
+    $zip = $_REQUEST['FromZip'];
+    $country = $_REQUEST['FromCountry'];
     $msg = $_REQUEST['Body'];
    
     header("content-type: text/xml");
@@ -15,17 +19,7 @@
     // open a file ponter to write our data
     $fp = fopen("data.txt", "a");
 
-    switch($msg){
-        case "poll":
-            $out = "Thanks for taking our poll! Text us back with the name of your favorite movie from last year!";
-        break;
-        
-        default:
-            // write the data file
-            fwrite($fp, $from . ',sms,Favorite Movie this year,' . $msg . ',' . date("c", $t) . "\n");
-            $out = "Really? Your favorite film last year was " . $msg;
-        break;
-    }
+    fwrite($fp, $from, $city, $state, $zip, $country, date("c", $t) . "\n");
     
     // close out file pointer
     fclose($fp);
