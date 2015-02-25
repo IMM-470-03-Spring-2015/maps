@@ -25,5 +25,5 @@
     fclose($fp);
 ?>
 <Response>
-    <Message><?php echo $out; ?></Message>
+    <Message>Thanks!</Message>
 </Response>
