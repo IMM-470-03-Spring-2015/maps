@@ -19,7 +19,7 @@
     // open a file ponter to write our data
     $fp = fopen("data.txt", "a");
 
-    fwrite($fp, $from, $city, $state, $zip, $country, date("c", $t) . "\n");
+    fwrite($fp, $from . "," . $city . "," . $state . "," . $zip . "," . $country . "," . date("c", $t) . "\n");
     
     // close out file pointer
     fclose($fp);
