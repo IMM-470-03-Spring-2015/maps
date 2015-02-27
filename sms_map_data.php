@@ -25,5 +25,5 @@
     fclose($fp);
 ?>
 <Response>
-    <Message>Thanks!</Message>
+    <Message>Thanks! Here's your phone's exchange location: <?php echo $city . "," . $state . "," . $zip . "," . $country; ?></Message>
 </Response>
