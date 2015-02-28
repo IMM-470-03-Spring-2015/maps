@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Hello Leaflet.js!</title>
+        <title>IMM ICT4Dev Team</title>
         
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
         
@@ -24,7 +24,7 @@
         <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
         <script>
             // initialize our map
-            var map = L.map('map').setView([40.268835, -74.78091], 15);
+            var map = L.map('map').setView([16, -24], 3);
             
             /*
             // add an OpenStreetMap tile layer
@@ -37,9 +37,18 @@
                 attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
             
-            // add a marker in the given location, attach some popup content to it and open the popup
+            // add a markers in the given location, attach some popup content to it and open the popup
             L.marker([40.268835, -74.78091]).addTo(map)
                 .bindPopup('Go TCNJ Lions!');
+            // TICAH            
+            L.marker([-1.3154995, 36.695187]).addTo(map)
+                .bindPopup('TICAH!');
+            // 1000 Hills Community Helpers            
+            L.marker([-29.7562074, 30.7433415]).addTo(map)
+                .bindPopup('1000 Hills Community Helpers');
+            // CEWOD           
+            L.marker([-5.0904712, 39.093979]).addTo(map)
+                .bindPopup('Women Center for Communication and Development');
         </script>
     </body>
 </html>
