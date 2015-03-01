@@ -13,9 +13,7 @@
                 height: 650px; 
                 margin: 0 auto;
             }
-        </style>
-        
-        
+        </style> 
         
     </head>
     
@@ -29,7 +27,7 @@
             // initialize our map
             var map = L.map('map').setView([40.268835, -74.78091], 15);
             
-            
+            // layer in the base map tile
             L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
