@@ -26,29 +26,25 @@
             // initialize our map
             var map = L.map('map').setView([16, -24], 3);
             
-            /*
-            // add an OpenStreetMap tile layer
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            */
-            
+            // add a MapQuest tile layer
             L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
             
-            // add a markers in the given location, attach some popup content to it and open the popup
+            // Add markers
+            
+            // TCNJ
             L.marker([40.268835, -74.78091]).addTo(map)
-                .bindPopup('Go TCNJ Lions!');
+                .bindPopup('<a href="http://www.tcnj.edu" title="TCNJ Website" target="_blank">Go Lions!</a>"');
             // TICAH            
             L.marker([-1.3154995, 36.695187]).addTo(map)
-                .bindPopup('TICAH!');
+                .bindPopup('<a href="http://ticahealth.org/index.htm" title="TICAH Website" target="_blank">TICAH!</a>');
             // 1000 Hills Community Helpers            
             L.marker([-29.7562074, 30.7433415]).addTo(map)
-                .bindPopup('1000 Hills Community Helpers');
+                .bindPopup('<a href="http://www.1000hch.co.uk/Default.aspx" title="1000 Hills Community Helpers Website" target="_blank">1000 Hills Community Helpers</a>');
             // CEWOD           
             L.marker([-5.0904712, 39.093979]).addTo(map)
-                .bindPopup('Women Center for Communication and Development');
+                .bindPopup('<a href="http://cewod.org/" title="CEWOD Website" target="_blank">Women Center for Communication and Development</a>');
         </script>
     </body>
 </html>
